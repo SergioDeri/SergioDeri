@@ -43,7 +43,8 @@ export const projects: Project[] = [
   {
     name: "ElegilosVos",
     dosName: "ELEGILOS",
-    description: "Football fans vote for their team.",
+    description: "Football fans pick their team's starting eleven before each match and see how the crowd's choice compares with the coach's.",
+    url: "https://elegilosvos.vercel.app",
     screen: "vote",
     stack: [],
   },

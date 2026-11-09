@@ -1,14 +1,11 @@
 ---
-import { Image } from "astro:assets";
-import avatar from "../assets/avatar.webp";
 import { navigation, site } from "../data/site";
 import SocialLinks from "./SocialLinks.astro";
 ---
 
 <header class="header-fade sticky top-0 z-40">
   <div class="shell grid grid-cols-[1fr_auto] items-center gap-x-4 py-2 md:grid-cols-[1fr_auto_1fr]">
-    <a href="#top" class="flex w-fit items-center gap-3 font-mono text-sm text-ink">
-      <Image src={avatar} alt="" width={36} height={36} densities={[1, 2]} class="size-9 rounded-lg" />
+    <a href="#top" class="flex min-h-9 w-fit items-center font-mono text-sm text-ink">
       {site.brand}
     </a>
 

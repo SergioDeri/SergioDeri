@@ -12,7 +12,7 @@ const screenshots = import.meta.glob<{ default: ImageMetadata }>("../assets/proj
 const screenshotFor = (file?: string) => (file ? screenshots[`../assets/projects/${file}`]?.default : undefined);
 ---
 
-<section id="projects" class="shell reveal py-16 md:py-24">
+<section id="projects" class="shell reveal py-8 md:py-12">
   <SectionHeading title="Projects" signal="200 OK" />
   <div class="grid gap-12">
     {

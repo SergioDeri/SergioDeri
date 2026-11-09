@@ -122,6 +122,27 @@
     background: repeating-linear-gradient(to bottom, rgb(5 5 5 / 0.2) 0 1px, transparent 1px 3px);
   }
 
+  /* Cutout portrait: thin neon rim, scanlines limited to the figure, fading into the page. */
+  /* The padded box keeps the mask from clipping the glow at the image edge. */
+  .portrait-fade {
+    margin: -3rem -1.5rem 0 -3rem;
+    padding: 3rem 1.5rem 0 3rem;
+    mask-image: linear-gradient(to bottom, black 84%, transparent);
+  }
+
+  .portrait {
+    filter: drop-shadow(0 0 1px rgb(255 107 181 / 0.75)) drop-shadow(-12px 0 30px rgb(95 235 255 / 0.1));
+  }
+
+  .portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(to bottom, rgb(5 5 5 / 0.22) 0 1px, transparent 1px 3px);
+    mask: var(--cutout) center / 100% 100% no-repeat;
+  }
+
   .nav-link {
     position: relative;
     display: inline-block;

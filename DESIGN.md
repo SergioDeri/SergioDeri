@@ -177,7 +177,7 @@ components:
 
 A terminal left running on a Tokyo side street, kept by one person who built everything on it. The page is a near-black room with a faint 120px grid on the wall and violet light falling from the header. Two neon colours do all the talking: cyan where something can be done, magenta where something is being named or answered. Everything else is ink, grey and hairline.
 
-Density is unhurried. Type is large, sections sit far apart, and the personal projects carry the most mass on the page. Ornament is line-work drawn at low opacity: the asanoha hemp-leaf lattice and the seigaiha wave horizon, the scanlines over images, the single neon sign. Each should register only when you look for it. The world's humour lives in monospaced marginalia that read like telephony and DOS output, set small and grey beside the real content.
+Density is unhurried. Type is large, sections sit far apart, and the personal projects carry the most mass on the page. Ornament is line-work drawn at low opacity: the asanoha hemp-leaf lattice, the seigaiha wave horizon and the scanlines over images. Each should register only when you look for it. The world's humour lives in monospaced marginalia that read like telephony and DOS output, set small and grey beside the real content.
 
 The system rejects corporate templates and loud cyberpunk: heavy glitch, flicker, chromatic aberration. It also rejects retro-web costume and Japanese characters used as decoration; the Japanese reference is carried by geometry alone.
 
@@ -198,7 +198,7 @@ A black room lit by two neon tubes, with violet as the ambient spill and a cold 
 - **Lit Cyan** (#a5f4ff): The hover state of filled cyan buttons, and nothing else.
 
 ### Secondary
-- **Sign Magenta** (#ff6bb5): The naming and response colour. The role line under the name, the neon sign's frame, the asanoha lattice in project cards, the portrait border, every link and card hover, the invalid field border, and text selection.
+- **Sign Magenta** (#ff6bb5): The naming and response colour. The role line under the name, the asanoha lattice in project cards, the portrait border, every link and card hover, the invalid field border, and text selection.
 
 ### Tertiary
 - **Header Violet** (#4c2a85): Ambient only, as the radial glow falling from the header. It is too dark to carry text or lines.
@@ -250,7 +250,7 @@ A single column of sections in a centred container (1152px maximum, 24px gutters
 
 Records use a two-column ledger from 768px wide: a 208px mono column for the date or category, and the content beside it. Below that, the columns stack. Project cards stack with 48px between them, each split about 6:5 between screen and text from 768px wide. The grid behind everything is fixed to the viewport at 120px.
 
-The neon sign takes a 132px column on the right of the hero from 1024px wide. Below that it disappears and a 64px strip of asanoha closes the hero text instead. The sticky header runs three columns from 768px wide and wraps navigation onto its own row below that, with social icons hidden.
+From 1024px wide the portrait takes a 29rem column on the right of the hero. Below that it sits centred above the hero text at full opacity, and a 64px strip of asanoha closes the text. The sticky header runs three columns from 768px wide and wraps navigation onto its own row below that, with social icons hidden.
 
 Motion belongs to arrival and state. The name enters letter by letter and ends on a solid block cursor that stays still. Sections rise 14px and fade once as they enter the viewport. Under reduced motion all of it is removed and the content is simply present, including the name and every revealed section.
 
@@ -260,21 +260,20 @@ Motion belongs to arrival and state. The name enters letter by letter and ends o
 
 ## Elevation & Depth
 
-Flat at rest. Depth comes from tonal steps (Void to Zinc Surface) and hairlines. The one elevation event is a project card under a pointer, which rises 3px and gains a soft magenta glow beneath it. The neon sign carries a permanent faint halo because it is a light source, and that halo is the only resting neon glow on the page; the header's violet wash is ambient light.
+Flat at rest. Depth comes from tonal steps (Void to Zinc Surface) and hairlines. The one elevation event is a project card under a pointer, which rises 3px and gains a soft magenta glow beneath it.
 
 ### Shadow Vocabulary
 - **Card lift** (`box-shadow: 0 14px 34px -18px rgb(255 107 181 / 0.42)`): Project card on hover only, paired with a magenta border.
-- **Neon halo** (`filter: drop-shadow(0 0 7px rgb(255 107 181 / 0.3))`): The neon sign only.
 
 ### Named Rules
 
-**The Almost-Imperceptible Rule.** Atmosphere stays at the opacities the build set: grid at 3.5% white, scanlines at 20% void every 3px, asanoha at 42%, seigaiha at 32%, sign lattice at 66% and fading down its height. If an effect is the first thing you notice, it is too strong.
+**The Almost-Imperceptible Rule.** Atmosphere stays at the opacities the build set: grid at 3.5% white, scanlines at 20% void every 3px, asanoha at 42%, seigaiha at 32%. If an effect is the first thing you notice, it is too strong.
 
-**The Still Light Rule.** Light never moves. Scanlines, glows, the sign and the cursor are static; they do not animate, pulse or blink.
+**The Still Light Rule.** Light never moves. Scanlines, glows and the cursor are static; they do not animate, pulse or blink.
 
 ## Shapes
 
-Gently rounded rectangles (8px) for every container: cards, fields, images, screens, the sign's frame, the form's submit button. Full-round capsules are reserved for small inline things: chips, and the compact Contact button in the header. Timeline nodes are 9px ink circles on a hairline spine.
+Gently rounded rectangles (8px) for every container: cards, fields, images, screens, the form's submit button. Full-round capsules are reserved for small inline things: chips, and the compact Contact button in the header. Timeline nodes are 9px ink circles on a hairline spine.
 
 Traditional patterns are drawn as thin strokes (0.7 to 0.8 units) and fade out by mask: asanoha from the top-right corner of a card, seigaiha downward from nothing into the footer. Cards are broken once along the top edge, where the DOS path sits on a Void notch across the border.
 
@@ -313,13 +312,10 @@ Centred anchors at 16px in Muted Grey, turning magenta on hover. The current sec
 A headline on the left and a 14px mono SIP signal on the right, sharing a baseline over a Hairline rule. The signal is decorative and hidden from assistive technology.
 
 ### Scanlined Frame
-Images and screens sit in an 8px frame with a static scanline layer above them. The portrait is a duotone photograph with a 60% magenta border at 200px square (96px on small screens). A project screenshot, when one exists, takes this same frame with a Hairline border.
+Images and screens sit in an 8px frame with a static scanline layer above them. The portrait is a large duotone cutout with no frame: a 1px magenta rim follows the silhouette, scanlines are masked to the figure, and the base fades into the page. It sits on the right of the hero, 29rem wide on desktop. A project screenshot, when one exists, takes this same frame with a Hairline border.
 
 ### CRT Screen
 A 16:9 placeholder drawn in code, standing in for a missing screenshot: CRT Glass, a `C:\>` run line in cyan, a line-and-block sketch of the product, and the words "sample screen" in the corner. It is labelled as a sample and it is replaced by a real screenshot when one arrives.
-
-### Neon Sign
-A vertical 132px panel in the hero: a cyan asanoha lattice inside a 1.5-unit magenta rounded frame, fading to 34% at its foot, with the neon halo. One per page.
 
 ## Do's and Don'ts
 
@@ -337,7 +333,7 @@ A vertical 132px panel in the hero: a cyan asanoha lattice inside a 1.5-unit mag
 - **Don't** use Japanese characters as decoration; asanoha and seigaiha carry the reference as line-work.
 - **Don't** extend the DOS path or `C:\>` line into windows, title bars, taskbars, boot screens or other operating-system costume, or into GeoCities-style retro-web pastiche.
 - **Don't** fill the asanoha or seigaiha with colour, or raise them above the opacities in the Almost-Imperceptible Rule.
-- **Don't** add a second neon sign, or a resting neon glow to any other element.
+- **Don't** add a resting neon glow to any element.
 - **Don't** add looping animation, including a blinking cursor.
 - **Don't** give another section the visual weight of the project cards.
 - **Don't** show an invented fact on a surface; missing data is hidden.

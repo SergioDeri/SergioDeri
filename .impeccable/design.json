@@ -256,11 +256,6 @@
         "name": "card-lift",
         "value": "0 14px 34px -18px rgb(255 107 181 / 0.42)",
         "purpose": "Project card on hover only, paired with a magenta border."
-      },
-      {
-        "name": "neon-halo",
-        "value": "drop-shadow(0 0 7px rgb(255 107 181 / 0.3))",
-        "purpose": "Filter on the neon sign; the only resting neon glow."
       }
     ],
     "motion": [
@@ -387,14 +382,6 @@
       "css": ".ds-scan { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 16 / 9; min-height: 224px; overflow: hidden; background: #0a0a10; border: 1px solid var(--color-line); border-radius: 8px; padding: 16px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-muted); } .ds-scan::after { content: \"\"; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, rgb(5 5 5 / 0.2) 0 1px, transparent 1px 3px); } .ds-scan-run { margin: 0; color: var(--color-cyan); } .ds-scan-note { margin: 0; text-align: right; }"
     },
     {
-      "name": "Neon Sign",
-      "kind": "custom",
-      "refersTo": "neon-sign",
-      "description": "Vertical panel of cyan asanoha lattice in a magenta frame with the only resting neon halo. One per page.",
-      "html": "<svg class=\"ds-sign\" viewBox=\"0 0 132 460\" fill=\"none\" aria-hidden=\"true\"><defs><pattern id=\"ds-asanoha\" width=\"33\" height=\"57.16\" patternUnits=\"userSpaceOnUse\"><path d=\"M-33 0L-16.5 9.53M0 0L-16.5 9.53M-16.5 28.58L-16.5 9.53M-33 0L0 0L-16.5 28.58ZM0 0L0 19.05M-16.5 28.58L0 19.05M16.5 28.58L0 19.05M0 0L-16.5 28.58L16.5 28.58ZM0 0L16.5 9.53M33 0L16.5 9.53M16.5 28.58L16.5 9.53M0 0L33 0L16.5 28.58ZM33 0L33 19.05M16.5 28.58L33 19.05M49.5 28.58L33 19.05M33 0L16.5 28.58L49.5 28.58ZM33 0L49.5 9.53M66 0L49.5 9.53M49.5 28.58L49.5 9.53M33 0L66 0L49.5 28.58ZM66 0L66 19.05M49.5 28.58L66 19.05M82.5 28.58L66 19.05M66 0L49.5 28.58L82.5 28.58ZM-16.5 28.58L0 38.11M16.5 28.58L0 38.11M0 57.16L0 38.11M-16.5 28.58L16.5 28.58L0 57.16ZM16.5 28.58L16.5 47.63M0 57.16L16.5 47.63M33 57.16L16.5 47.63M16.5 28.58L0 57.16L33 57.16ZM16.5 28.58L33 38.11M49.5 28.58L33 38.11M33 57.16L33 38.11M16.5 28.58L49.5 28.58L33 57.16ZM49.5 28.58L49.5 47.63M33 57.16L49.5 47.63M66 57.16L49.5 47.63M49.5 28.58L33 57.16L66 57.16ZM49.5 28.58L66 38.11M82.5 28.58L66 38.11M66 57.16L66 38.11M49.5 28.58L82.5 28.58L66 57.16ZM82.5 28.58L82.5 47.63M66 57.16L82.5 47.63M99 57.16L82.5 47.63M82.5 28.58L66 57.16L99 57.16Z\" stroke=\"#5FEBFF\" stroke-opacity=\"0.66\" stroke-width=\"0.7\"/></pattern><linearGradient id=\"ds-sign-fade\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#fff\"/><stop offset=\"1\" stop-color=\"#fff\" stop-opacity=\"0.34\"/></linearGradient><mask id=\"ds-sign-mask\"><rect width=\"132\" height=\"460\" fill=\"url(#ds-sign-fade)\"/></mask></defs><g mask=\"url(#ds-sign-mask)\"><rect x=\"10\" y=\"4\" width=\"112\" height=\"452\" rx=\"8\" fill=\"url(#ds-asanoha)\"/><rect x=\"10\" y=\"4\" width=\"112\" height=\"452\" rx=\"8\" stroke=\"#FF6BB5\" stroke-width=\"1.5\"/></g></svg>",
-      "css": ".ds-sign { display: block; width: 132px; height: auto; filter: drop-shadow(0 0 7px rgb(255 107 181 / 0.3)); }"
-    },
-    {
       "name": "Name With Block Cursor",
       "kind": "custom",
       "refersTo": "display",
@@ -405,7 +392,7 @@
   ],
   "narrative": {
     "northStar": "The Night-Shift Call Log",
-    "overview": "A terminal left running on a Tokyo side street, kept by one person who built everything on it. The page is a near-black room with a faint 120px grid on the wall and violet light falling from the header. Two neon colours do all the talking: cyan where something can be done, magenta where something is being named or answered. Everything else is ink, grey and hairline.\n\nDensity is unhurried. Type is large, sections sit far apart, and the personal projects carry the most mass on the page. Ornament is line-work drawn at low opacity: the asanoha hemp-leaf lattice and the seigaiha wave horizon, the scanlines over images, the single neon sign. Each should register only when you look for it. The world's humour lives in monospaced marginalia that read like telephony and DOS output, set small and grey beside the real content.\n\nThe system rejects corporate templates and loud cyberpunk: heavy glitch, flicker, chromatic aberration. It also rejects retro-web costume and Japanese characters used as decoration; the Japanese reference is carried by geometry alone.",
+    "overview": "A terminal left running on a Tokyo side street, kept by one person who built everything on it. The page is a near-black room with a faint 120px grid on the wall and violet light falling from the header. Two neon colours do all the talking: cyan where something can be done, magenta where something is being named or answered. Everything else is ink, grey and hairline.\n\nDensity is unhurried. Type is large, sections sit far apart, and the personal projects carry the most mass on the page. Ornament is line-work drawn at low opacity: the asanoha hemp-leaf lattice, the seigaiha wave horizon and the scanlines over images. Each should register only when you look for it. The world's humour lives in monospaced marginalia that read like telephony and DOS output, set small and grey beside the real content.\n\nThe system rejects corporate templates and loud cyberpunk: heavy glitch, flicker, chromatic aberration. It also rejects retro-web costume and Japanese characters used as decoration; the Japanese reference is carried by geometry alone.",
     "keyCharacteristics": [
       "Near-black ground with a fixed 120px hairline grid and one violet glow from the top of the page.",
       "Two neon accents with separate jobs: cyan acts, magenta names and answers hover.",
@@ -447,12 +434,12 @@
       },
       {
         "name": "The Almost-Imperceptible Rule",
-        "body": "Atmosphere stays at the opacities the build set: grid at 3.5% white, scanlines at 20% void every 3px, asanoha at 42%, seigaiha at 32%, sign lattice at 66% and fading down its height. If an effect is the first thing you notice, it is too strong.",
+        "body": "Atmosphere stays at the opacities the build set: grid at 3.5% white, scanlines at 20% void every 3px, asanoha at 42%, seigaiha at 32%. If an effect is the first thing you notice, it is too strong.",
         "section": "elevation"
       },
       {
         "name": "The Still Light Rule",
-        "body": "Light never moves. Scanlines, glows, the sign and the cursor are static; they do not animate, pulse or blink.",
+        "body": "Light never moves. Scanlines, glows and the cursor are static; they do not animate, pulse or blink.",
         "section": "elevation"
       }
     ],
@@ -470,7 +457,7 @@
       "Don't use Japanese characters as decoration; asanoha and seigaiha carry the reference as line-work.",
       "Don't extend the DOS path or `C:\\>` line into windows, title bars, taskbars, boot screens or other operating-system costume, or into GeoCities-style retro-web pastiche.",
       "Don't fill the asanoha or seigaiha with colour, or raise them above the opacities in the Almost-Imperceptible Rule.",
-      "Don't add a second neon sign, or a resting neon glow to any other element.",
+      "Don't add a resting neon glow to any element.",
       "Don't add looping animation, including a blinking cursor.",
       "Don't give another section the visual weight of the project cards.",
       "Don't show an invented fact on a surface; missing data is hidden."
