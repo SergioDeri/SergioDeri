@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { projects } from "../data/projects";
+import Asanoha from "./Asanoha.astro";
+import CrtScreen from "./CrtScreen.astro";
+import SectionHeading from "./SectionHeading.astro";
+
+const screenshots = import.meta.glob<{ default: ImageMetadata }>("../assets/projects/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+});
+const screenshotFor = (file?: string) => (file ? screenshots[`../assets/projects/${file}`]?.default : undefined);
+---
+
+<section id="projects" class="shell reveal py-16 md:py-24">
+  <SectionHeading title="Projects" signal="200 OK" />
+  <div class="grid gap-12">
+    {
+      projects.map((project) => {
+        const screenshot = screenshotFor(project.image);
+        return (
+          <article class="project-card relative rounded-lg border border-line bg-surface p-5 pt-7 md:p-8 md:pt-9">
+            <p class="absolute -top-2.5 left-5 bg-void px-2 font-mono text-xs break-all text-muted md:left-8" aria-hidden="true">
+              C:\SERGIO\PROJECTS\{project.dosName}
+            </p>
+            <Asanoha width={224} height={300} class="absolute top-0 right-0 h-full max-h-[300px] w-56 rounded-tr-lg" />
+            <div class="relative grid items-center gap-6 md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:gap-10">
+              {screenshot ? (
+                <div class="scanlines overflow-hidden rounded-lg border border-line">
+                  <Image src={screenshot} alt={project.imageAlt ?? ""} widths={[480, 800, 1200]} sizes="(min-width: 48rem) 560px, 100vw" />
+                </div>
+              ) : (
+                <CrtScreen screen={project.screen} name={project.name} />
+              )}
+              <div>
+                <h3 class="text-3xl leading-none font-bold tracking-[-0.02em] md:text-[2.5rem]">{project.name}</h3>
+                {project.inProduction && <p class="mt-2 font-mono text-sm text-muted">in production</p>}
+                <p class="mt-4 text-pretty text-ink">{project.description}</p>
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener"
+                    class="more-link mt-5 inline-block py-1 font-mono text-base text-cyan transition-colors duration-150"
+                  >
+                    &gt; More info<span aria-hidden="true">_</span>
+                    <span class="sr-only"> about {project.name} (opens in a new tab)</span>
+                  </a>
+                )}
+              </div>
+            </div>
+            {project.stack.length > 0 && (
+              <ul class="mt-6 flex flex-wrap gap-2 border-t border-line pt-5">
+                {project.stack.map((tech) => (
+                  <li class="pill rounded-full border border-line-strong px-3 py-0.5 font-mono text-sm">{tech}</li>
+                ))}
+              </ul>
+            )}
+          </article>
+        );
+      })
+    }
+  </div>
+</section>

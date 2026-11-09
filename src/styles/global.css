@@ -1,0 +1,275 @@
+@import "tailwindcss";
+@import "@fontsource-variable/onest";
+@import "@fontsource-variable/roboto-mono";
+
+@theme {
+  --color-void: #050505;
+  --color-ink: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-surface: #18181b;
+  --color-line: #3f3f46;
+  --color-line-strong: #71717a;
+  --color-cyan: #5febff;
+  --color-magenta: #ff6bb5;
+  --color-violet: #4c2a85;
+  --color-violet-light: #b79cf0;
+  --font-sans: "Onest Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Roboto Mono Variable", ui-monospace, Menlo, monospace;
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-void);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    scroll-padding-top: 8rem;
+    scrollbar-color: var(--color-line) var(--color-void);
+  }
+
+  body {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    min-height: 100dvh;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (min-width: 48rem) {
+    body {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Fixed 120px hairline grid across the whole page. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 120px 120px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--color-magenta);
+    color: var(--color-void);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  input,
+  textarea {
+    caret-color: var(--color-cyan);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .shell {
+    width: min(100% - 3rem, 72rem);
+    margin-inline: auto;
+  }
+
+  /* Violet light falling from the header, blended into black. */
+  .hero-glow {
+    position: absolute;
+    inset: -6rem 0 auto;
+    height: 46rem;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(70% 62% at 50% 0%, rgb(76 42 133 / 0.72), rgb(76 42 133 / 0.22) 55%, transparent 100%);
+  }
+
+  /* Semi-transparent header that dissolves into the page, leaving no seam in the glow. */
+  .header-fade::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 -1.75rem;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.94), rgb(0 0 0 / 0.78) 62%, transparent);
+  }
+
+  .scanlines {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .scanlines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(to bottom, rgb(5 5 5 / 0.2) 0 1px, transparent 1px 3px);
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-block: 0.25rem;
+    color: var(--color-muted);
+    transition: color 160ms ease;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -2px;
+    height: 3px;
+    background: var(--color-cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms var(--ease-out-strong);
+  }
+
+  .nav-link[aria-current="true"] {
+    color: var(--color-ink);
+  }
+
+  .nav-link[aria-current="true"]::after {
+    transform: scaleX(1);
+  }
+
+  .button {
+    transition:
+      transform 160ms var(--ease-out-strong),
+      background-color 160ms ease;
+  }
+
+  .button:active {
+    transform: scale(0.97);
+  }
+
+  .pill {
+    transition: transform 160ms var(--ease-out-strong);
+  }
+
+  .project-card {
+    transition:
+      transform 220ms var(--ease-out-strong),
+      border-color 160ms ease,
+      box-shadow 220ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .nav-link:hover {
+      color: var(--color-magenta);
+    }
+
+    .button:hover {
+      background-color: #a5f4ff;
+    }
+
+    .pill:hover {
+      transform: scale(1.04);
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-magenta);
+      box-shadow: 0 14px 34px -18px rgb(255 107 181 / 0.42);
+    }
+
+    .more-link:hover {
+      color: var(--color-magenta);
+    }
+  }
+
+  .field {
+    width: 100%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-line-strong);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--color-ink);
+    transition: border-color 160ms ease;
+  }
+
+  .field:user-invalid {
+    border-color: var(--color-magenta);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .button:active,
+    .pill:hover,
+    .project-card:hover {
+      transform: none;
+    }
+
+    .nav-link::after {
+      transition: none;
+    }
+  }
+
+  /* Letter-by-letter entrance; the name is fully visible without it. */
+  .letter {
+    display: inline-block;
+    white-space: pre;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.72em;
+    margin-left: 0.12em;
+    background: var(--color-cyan);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .letter {
+      animation: letter-in 420ms var(--ease-out-strong) backwards;
+      animation-delay: calc(var(--i) * 42ms + 120ms);
+    }
+
+    .cursor {
+      animation: fade-in 120ms ease backwards;
+      animation-delay: 1000ms;
+    }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition:
+        opacity 600ms var(--ease-out-strong),
+        transform 600ms var(--ease-out-strong);
+    }
+
+    .js .reveal.is-in {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@keyframes letter-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.16em);
+    filter: blur(5px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}

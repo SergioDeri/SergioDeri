@@ -1,0 +1,95 @@
+---
+import type { Project } from "../data/projects";
+
+interface Props {
+  screen: Project["screen"];
+  name: string;
+}
+const { screen, name } = Astro.props;
+
+const days = [
+  ["MON", 3],
+  ["TUE", 5],
+  ["WED", 2],
+  ["THU", 4],
+  ["FRI", 3],
+] as const;
+const tickets = [
+  ["#0142", "client data sync", "open"],
+  ["#0141", "project milestone", "in progress"],
+  ["#0139", "invoice attached", "closed"],
+  ["#0137", "new client intake", "closed"],
+];
+/** Strip heights as a share of the screen width. */
+const strips = [30, 24, 33, 20, 27, 31];
+---
+
+<div
+  class="@container scanlines flex aspect-[16/9] min-h-56 w-full flex-col overflow-hidden rounded-lg border border-line bg-[#0a0a10] p-4 font-mono text-xs text-muted"
+  aria-hidden="true"
+>
+  <p class="text-cyan">C:\&gt; run {name.toLowerCase()}</p>
+  <div class="mt-3 flex min-h-0 flex-1 flex-col justify-center">
+    {
+      screen === "week" && (
+        <div class="grid grid-cols-5 gap-2">
+          {days.map(([day, orders]) => (
+            <div>
+              <p class="mb-2 text-center">{day}</p>
+              <div class="grid gap-1">
+                {Array.from({ length: 5 }, (_, slot) => (
+                  <span class={`h-[clamp(0.875rem,4.6cqw,1.75rem)] rounded-[2px] ${slot < orders ? "bg-cyan/70" : "border border-line"}`} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )
+    }
+    {
+      screen === "menu" && (
+        <div class="border-t-2 border-magenta/70">
+          <div class="flex justify-around">
+            {strips.map((height, index) => (
+              <span
+                class={`flex w-[11%] flex-col items-center gap-2 rounded-b-[3px] border border-t-0 pt-3 ${index % 2 ? "border-cyan/60" : "border-magenta/60"}`}
+                style={`height:${height}cqw`}
+              >
+                <i class="h-0.5 w-1/2 bg-current" />
+                <i class="h-0.5 w-1/2 bg-current" />
+                <i class="h-0.5 w-1/2 bg-current" />
+              </span>
+            ))}
+          </div>
+        </div>
+      )
+    }
+    {
+      screen === "tickets" && (
+        <ul class="grid gap-2">
+          {tickets.map(([id, subject, state]) => (
+            <li class="flex justify-between gap-3 border-b border-line pb-2">
+              <span class="truncate"><span class="text-magenta">{id}</span> {subject}</span>
+              <span class={state === "closed" ? "" : "text-cyan"}>{state}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    {
+      screen === "vote" && (
+        <div class="grid gap-4">
+          <div>
+            <p class="mb-1 flex justify-between"><span>TEAM A</span><span>58%</span></p>
+            <span class="block h-[clamp(1.25rem,8cqw,3rem)] w-[58%] bg-cyan/70" />
+          </div>
+          <div>
+            <p class="mb-1 flex justify-between"><span>TEAM B</span><span>42%</span></p>
+            <span class="block h-[clamp(1.25rem,8cqw,3rem)] w-[42%] bg-magenta/70" />
+          </div>
+        </div>
+      )
+    }
+  </div>
+  <p class="mt-3 text-right">sample screen</p>
+</div>

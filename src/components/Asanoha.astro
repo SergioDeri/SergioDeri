@@ -1,0 +1,32 @@
+---
+import { asanohaPath } from "../lib/patterns";
+
+interface Props {
+  width: number;
+  height: number;
+  class?: string;
+  /** Fade along the edges of a horizontal strip instead of from the corner. */
+  band?: boolean;
+}
+const { width, height, class: className, band = false } = Astro.props;
+---
+
+<svg
+  viewBox={`0 0 ${width} ${height}`}
+  preserveAspectRatio="xMaxYMin slice"
+  class:list={["asanoha pointer-events-none", { band }, className]}
+  fill="none"
+  aria-hidden="true"
+>
+  <path d={asanohaPath(width, height, 32)} stroke="#FF6BB5" stroke-opacity="0.42" stroke-width="0.7"></path>
+</svg>
+
+<style>
+  .asanoha {
+    mask-image: radial-gradient(ellipse at 100% 0%, black, transparent 72%);
+  }
+
+  .asanoha.band {
+    mask-image: linear-gradient(to bottom, transparent, black 50%, transparent);
+  }
+</style>

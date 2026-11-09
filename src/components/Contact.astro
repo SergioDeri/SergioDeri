@@ -1,0 +1,73 @@
+---
+import { site } from "../data/site";
+import SectionHeading from "./SectionHeading.astro";
+
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY ?? "";
+const labelClass = "mb-2 block font-mono text-sm text-muted";
+---
+
+<section id="contact" class="shell reveal py-16 md:py-24">
+  <SectionHeading title="Contact" signal="ACK" />
+  <form
+    id="contact-form"
+    action={site.contactEndpoint}
+    method="POST"
+    data-endpoint={site.contactEndpoint}
+    data-key={accessKey}
+    class="grid gap-6"
+  >
+    <input type="hidden" name="access_key" value={accessKey} />
+    <input type="hidden" name="from_name" value="Portfolio contact form" />
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="hidden" />
+
+    <div>
+      <label for="email" class={labelClass}>Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email" class="field" />
+    </div>
+    <div>
+      <label for="subject" class={labelClass}>Subject</label>
+      <input id="subject" name="subject" type="text" required class="field" />
+    </div>
+    <div>
+      <label for="message" class={labelClass}>Message</label>
+      <textarea id="message" name="message" required rows="6" class="field resize-y"></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="button w-full rounded-lg bg-cyan px-6 py-3.5 font-semibold text-void disabled:cursor-progress disabled:opacity-70"
+    >
+      Send message
+    </button>
+    <p id="contact-status" role="status" class="min-h-7 font-mono text-sm text-ink"></p>
+  </form>
+</section>
+
+<script>
+  import { sendContact, type ContactResult } from "../lib/contact";
+
+  const messages: Record<ContactResult, string> = {
+    sent: "200 OK: message delivered. I'll get back to you soon.",
+    failed: "503 Service Unavailable: it didn't go through. Try again, or reach me on LinkedIn.",
+    unconfigured: "503 Service Unavailable: this form isn't connected yet. Please reach me on LinkedIn.",
+  };
+
+  const form = document.querySelector<HTMLFormElement>("#contact-form")!;
+  const status = document.querySelector<HTMLElement>("#contact-status")!;
+  const button = form.querySelector<HTMLButtonElement>("button[type=submit]")!;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    button.disabled = true;
+    status.textContent = "100 Trying: sending your message.";
+
+    const result = await sendContact(new FormData(form), {
+      endpoint: form.dataset.endpoint!,
+      accessKey: form.dataset.key!,
+    });
+
+    status.textContent = messages[result];
+    if (result === "sent") form.reset();
+    button.disabled = false;
+  });
+</script>

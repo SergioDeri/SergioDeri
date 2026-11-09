@@ -1,0 +1,50 @@
+export interface Project {
+  name: string;
+  /** Last segment of the DOS path on the card. */
+  dosName: string;
+  description: string;
+  /** Provisional CRT artwork, used until `image` is set. */
+  screen: "week" | "tickets" | "menu" | "vote";
+  /** File name inside src/assets/projects, for a real screenshot. */
+  image?: string;
+  imageAlt?: string;
+  /** Destination of "More info"; the link is hidden while empty. */
+  url?: string;
+  /** Stack pills; the row is hidden while empty. */
+  stack: string[];
+  inProduction?: boolean;
+}
+
+export const projects: Project[] = [
+  {
+    name: "tostad.app",
+    dosName: "TOSTAD",
+    description: "SaaS platform for weekly food ordering at cafés.",
+    screen: "week",
+    url: "https://tostad.app",
+    stack: [],
+    inProduction: true,
+  },
+  {
+    name: "Oshinagaki",
+    dosName: "OSHINAGA",
+    description: "Online menu for restaurants.",
+    screen: "menu",
+    stack: [],
+    inProduction: true,
+  },
+  {
+    name: "clientelia",
+    dosName: "CLIENTEL",
+    description: "Complete platform to follow projects, manage tickets and keep client data in one place.",
+    screen: "tickets",
+    stack: [],
+  },
+  {
+    name: "ElegilosVos",
+    dosName: "ELEGILOS",
+    description: "Football fans vote for their team.",
+    screen: "vote",
+    stack: [],
+  },
+];

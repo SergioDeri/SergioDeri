@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+# Private source material: the resume contains a phone number
+SergioDeri_Resume.pdf
+image.png
+.impeccable/review/

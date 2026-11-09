@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T03:01:19.095Z",
+  "title": "Design System: Sergio Deri",
+  "extensions": {
+    "colorMeta": {
+      "cyan": {
+        "role": "primary",
+        "displayName": "Terminal Cyan",
+        "canonical": "#5febff",
+        "oklch": "oklch(87.2% 0.1223 208.3)",
+        "tonalRamp": [
+          "oklch(15.0% 0.1223 208.3)",
+          "oklch(26.0% 0.1223 208.3)",
+          "oklch(38.0% 0.1223 208.3)",
+          "oklch(50.0% 0.1223 208.3)",
+          "oklch(62.0% 0.1223 208.3)",
+          "oklch(74.0% 0.1223 208.3)",
+          "oklch(85.0% 0.1223 208.3)",
+          "oklch(95.0% 0.1223 208.3)"
+        ]
+      },
+      "cyan-bright": {
+        "role": "primary",
+        "displayName": "Lit Cyan",
+        "canonical": "#a5f4ff",
+        "oklch": "oklch(92.0% 0.0785 206.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0785 206.9)",
+          "oklch(26.0% 0.0785 206.9)",
+          "oklch(38.0% 0.0785 206.9)",
+          "oklch(50.0% 0.0785 206.9)",
+          "oklch(62.0% 0.0785 206.9)",
+          "oklch(74.0% 0.0785 206.9)",
+          "oklch(85.0% 0.0785 206.9)",
+          "oklch(95.0% 0.0785 206.9)"
+        ]
+      },
+      "magenta": {
+        "role": "secondary",
+        "displayName": "Sign Magenta",
+        "canonical": "#ff6bb5",
+        "oklch": "oklch(73.1% 0.1947 351.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.1947 351.9)",
+          "oklch(26.0% 0.1947 351.9)",
+          "oklch(38.0% 0.1947 351.9)",
+          "oklch(50.0% 0.1947 351.9)",
+          "oklch(62.0% 0.1947 351.9)",
+          "oklch(74.0% 0.1947 351.9)",
+          "oklch(85.0% 0.1947 351.9)",
+          "oklch(95.0% 0.1947 351.9)"
+        ]
+      },
+      "violet": {
+        "role": "tertiary",
+        "displayName": "Header Violet",
+        "canonical": "#4c2a85",
+        "oklch": "oklch(38.2% 0.1445 296.0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.1445 296.0)",
+          "oklch(26.0% 0.1445 296.0)",
+          "oklch(38.0% 0.1445 296.0)",
+          "oklch(50.0% 0.1445 296.0)",
+          "oklch(62.0% 0.1445 296.0)",
+          "oklch(74.0% 0.1445 296.0)",
+          "oklch(85.0% 0.1445 296.0)",
+          "oklch(95.0% 0.1445 296.0)"
+        ]
+      },
+      "violet-light": {
+        "role": "tertiary",
+        "displayName": "Pale Violet",
+        "canonical": "#b79cf0",
+        "oklch": "oklch(74.8% 0.1214 298.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.1214 298.2)",
+          "oklch(26.0% 0.1214 298.2)",
+          "oklch(38.0% 0.1214 298.2)",
+          "oklch(50.0% 0.1214 298.2)",
+          "oklch(62.0% 0.1214 298.2)",
+          "oklch(74.0% 0.1214 298.2)",
+          "oklch(85.0% 0.1214 298.2)",
+          "oklch(95.0% 0.1214 298.2)"
+        ]
+      },
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "#050505",
+        "oklch": "oklch(11.5% 0.0000 89.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0000 89.9)",
+          "oklch(26.0% 0.0000 89.9)",
+          "oklch(38.0% 0.0000 89.9)",
+          "oklch(50.0% 0.0000 89.9)",
+          "oklch(62.0% 0.0000 89.9)",
+          "oklch(74.0% 0.0000 89.9)",
+          "oklch(85.0% 0.0000 89.9)",
+          "oklch(95.0% 0.0000 89.9)"
+        ]
+      },
+      "crt-glass": {
+        "role": "neutral",
+        "displayName": "CRT Glass",
+        "canonical": "#0a0a10",
+        "oklch": "oklch(14.8% 0.0129 284.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0129 284.7)",
+          "oklch(26.0% 0.0129 284.7)",
+          "oklch(38.0% 0.0129 284.7)",
+          "oklch(50.0% 0.0129 284.7)",
+          "oklch(62.0% 0.0129 284.7)",
+          "oklch(74.0% 0.0129 284.7)",
+          "oklch(85.0% 0.0129 284.7)",
+          "oklch(95.0% 0.0129 284.7)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Zinc Surface",
+        "canonical": "#18181b",
+        "oklch": "oklch(21.0% 0.0059 285.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0059 285.9)",
+          "oklch(26.0% 0.0059 285.9)",
+          "oklch(38.0% 0.0059 285.9)",
+          "oklch(50.0% 0.0059 285.9)",
+          "oklch(62.0% 0.0059 285.9)",
+          "oklch(74.0% 0.0059 285.9)",
+          "oklch(85.0% 0.0059 285.9)",
+          "oklch(95.0% 0.0059 285.9)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#3f3f46",
+        "oklch": "oklch(37.0% 0.0119 285.8)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0119 285.8)",
+          "oklch(26.0% 0.0119 285.8)",
+          "oklch(38.0% 0.0119 285.8)",
+          "oklch(50.0% 0.0119 285.8)",
+          "oklch(62.0% 0.0119 285.8)",
+          "oklch(74.0% 0.0119 285.8)",
+          "oklch(85.0% 0.0119 285.8)",
+          "oklch(95.0% 0.0119 285.8)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "#71717a",
+        "oklch": "oklch(55.2% 0.0138 285.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0138 285.9)",
+          "oklch(26.0% 0.0138 285.9)",
+          "oklch(38.0% 0.0138 285.9)",
+          "oklch(50.0% 0.0138 285.9)",
+          "oklch(62.0% 0.0138 285.9)",
+          "oklch(74.0% 0.0138 285.9)",
+          "oklch(85.0% 0.0138 285.9)",
+          "oklch(95.0% 0.0138 285.9)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Grey",
+        "canonical": "#9ca3af",
+        "oklch": "oklch(71.4% 0.0192 261.3)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0192 261.3)",
+          "oklch(26.0% 0.0192 261.3)",
+          "oklch(38.0% 0.0192 261.3)",
+          "oklch(50.0% 0.0192 261.3)",
+          "oklch(62.0% 0.0192 261.3)",
+          "oklch(74.0% 0.0192 261.3)",
+          "oklch(85.0% 0.0192 261.3)",
+          "oklch(95.0% 0.0192 261.3)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#f3f4f6",
+        "oklch": "oklch(96.7% 0.0029 264.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0029 264.5)",
+          "oklch(26.0% 0.0029 264.5)",
+          "oklch(38.0% 0.0029 264.5)",
+          "oklch(50.0% 0.0029 264.5)",
+          "oklch(62.0% 0.0029 264.5)",
+          "oklch(74.0% 0.0029 264.5)",
+          "oklch(85.0% 0.0029 264.5)",
+          "oklch(95.0% 0.0029 264.5)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the hero, once per page, from 1024px wide."
+      },
+      "display-compact": {
+        "displayName": "Display Compact",
+        "purpose": "The name in the hero below 1024px wide."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles and project names from 768px wide; project names tighten to line-height 1."
+      },
+      "headline-compact": {
+        "displayName": "Headline Compact",
+        "purpose": "Section titles and project names below 768px wide."
+      },
+      "role": {
+        "displayName": "Role",
+        "purpose": "The magenta job title under the name, from 768px wide."
+      },
+      "role-compact": {
+        "displayName": "Role Compact",
+        "purpose": "The magenta job title below 768px wide."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Job titles in the timeline."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose from 768px wide; 36rem in the hero, 65ch in the timeline."
+      },
+      "body-compact": {
+        "displayName": "Body Compact",
+        "purpose": "Prose below 768px wide."
+      },
+      "ui": {
+        "displayName": "UI",
+        "purpose": "Navigation, skill chips, footer line."
+      },
+      "ui-strong": {
+        "displayName": "UI Strong",
+        "purpose": "Compact button labels."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Dates, form labels, section signals, skill categories, technology chips, status lines."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Card paths and the content of CRT screens."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 14px 34px -18px rgb(255 107 181 / 0.42)",
+        "purpose": "Project card on hover only, paired with a magenta border."
+      },
+      {
+        "name": "neon-halo",
+        "value": "drop-shadow(0 0 7px rgb(255 107 181 / 0.3))",
+        "purpose": "Filter on the neon sign; the only resting neon glow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-strong",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "All transforms and entrances."
+      },
+      {
+        "name": "state-color",
+        "value": "160ms ease",
+        "purpose": "Colour, background and border changes on hover."
+      },
+      {
+        "name": "press",
+        "value": "160ms ease-out-strong, scale(0.97)",
+        "purpose": "Button active state."
+      },
+      {
+        "name": "chip-hover",
+        "value": "160ms ease-out-strong, scale(1.04)",
+        "purpose": "Technology and skill chips under a pointer."
+      },
+      {
+        "name": "nav-underline",
+        "value": "200ms ease-out-strong",
+        "purpose": "Current-section bar wiping in from the left."
+      },
+      {
+        "name": "card-lift",
+        "value": "220ms ease-out-strong, translateY(-3px)",
+        "purpose": "Project card under a pointer."
+      },
+      {
+        "name": "section-reveal",
+        "value": "600ms ease-out-strong, translateY(14px) and fade",
+        "purpose": "Sections entering the viewport, once."
+      },
+      {
+        "name": "letter-in",
+        "value": "420ms ease-out-strong, 42ms stagger after 120ms, 0.16em rise from 5px blur",
+        "purpose": "Hero name entrance, letter by letter."
+      },
+      {
+        "name": "cursor-in",
+        "value": "120ms ease",
+        "purpose": "Block cursor fades in once the name has landed, then stays still."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "48rem"
+      },
+      {
+        "name": "lg",
+        "value": "64rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Contact Button",
+      "kind": "button",
+      "refersTo": "button-contact",
+      "description": "Compact cyan capsule in the header; the page's standing call to action.",
+      "html": "<a href=\"#contact\" class=\"ds-btn-contact\">Contact me</a>",
+      "css": ".ds-btn-contact { display: inline-block; background: var(--color-cyan); color: var(--color-void); font-family: var(--font-sans); font-size: 0.875rem; font-weight: 600; padding: 8px 16px; border-radius: 9999px; text-decoration: none; white-space: nowrap; transition: transform 160ms var(--ease-out-strong, cubic-bezier(0.23, 1, 0.32, 1)), background-color 160ms ease; } .ds-btn-contact:hover { background: #a5f4ff; } .ds-btn-contact:focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 3px; } .ds-btn-contact:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Submit Button",
+      "kind": "button",
+      "refersTo": "button-submit",
+      "description": "Full-width cyan block that sends the contact form.",
+      "html": "<button type=\"submit\" class=\"ds-btn-submit\">Send message</button>",
+      "css": ".ds-btn-submit { width: 100%; background: var(--color-cyan); color: var(--color-void); font-family: var(--font-sans); font-size: 1.25rem; font-weight: 600; padding: 14px 24px; border: 0; border-radius: 8px; cursor: pointer; transition: transform 160ms var(--ease-out-strong, cubic-bezier(0.23, 1, 0.32, 1)), background-color 160ms ease; } .ds-btn-submit:hover { background: #a5f4ff; } .ds-btn-submit:focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 3px; } .ds-btn-submit:active { transform: scale(0.97); } .ds-btn-submit:disabled { opacity: 0.7; cursor: progress; }"
+    },
+    {
+      "name": "Form Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Zinc input with a mono label above; turns magenta only after interaction proves it invalid.",
+      "html": "<label class=\"ds-field-wrap\"><span class=\"ds-field-label\">Email</span><input class=\"ds-field\" type=\"email\" required /></label>",
+      "css": ".ds-field-wrap { display: block; } .ds-field-label { display: block; margin-bottom: 8px; font-family: var(--font-mono); font-size: 0.875rem; color: var(--color-muted); } .ds-field { width: 100%; background: var(--color-surface); border: 1px solid var(--color-line-strong); border-radius: 8px; padding: 12px 16px; color: var(--color-ink); font-family: var(--font-sans); font-size: 1.25rem; caret-color: var(--color-cyan); transition: border-color 160ms ease; } .ds-field:focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 3px; } .ds-field:user-invalid { border-color: var(--color-magenta); }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Grey anchor, magenta on hover; the current section gets a 3px cyan bar wiped in from the left.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#a\">Skills</a><a class=\"ds-nav-link\" href=\"#b\" aria-current=\"true\">Experience</a><a class=\"ds-nav-link\" href=\"#c\">Projects</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 36px; font-family: var(--font-sans); font-size: 1rem; } .ds-nav-link { position: relative; display: inline-block; padding-block: 4px; color: var(--color-muted); text-decoration: none; transition: color 160ms ease; } .ds-nav-link::after { content: \"\"; position: absolute; inset: auto 0 -2px; height: 3px; background: var(--color-cyan); transform: scaleX(0); transform-origin: left; transition: transform 200ms var(--ease-out-strong, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-nav-link[aria-current=\"true\"] { color: var(--color-ink); } .ds-nav-link[aria-current=\"true\"]::after { transform: scaleX(1); } .ds-nav-link:hover { color: var(--color-magenta); } .ds-nav-link:focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 3px; }"
+    },
+    {
+      "name": "Technology Chip",
+      "kind": "chip",
+      "refersTo": "chip-tech",
+      "description": "Mono capsule in a project card's technology row.",
+      "html": "<span class=\"ds-chip-tech\">TypeScript</span>",
+      "css": ".ds-chip-tech { display: inline-block; border: 1px solid var(--color-line-strong); border-radius: 9999px; padding: 2px 12px; font-family: var(--font-mono); font-size: 0.875rem; color: var(--color-ink); transition: transform 160ms var(--ease-out-strong, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-chip-tech:hover { transform: scale(1.04); }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "The heaviest object on the page: zinc card with a DOS path notched into its top edge.",
+      "html": "<article class=\"ds-card\"><p class=\"ds-card-path\">C:\\SERGIO\\PROJECTS\\TOSTAD</p><h3 class=\"ds-card-title\">tostad.app</h3><p class=\"ds-card-body\">SaaS platform for weekly food ordering at cafes.</p><a class=\"ds-card-more\" href=\"#\">&gt; More info<span aria-hidden=\"true\">_</span></a></article>",
+      "css": ".ds-card { position: relative; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 8px; padding: 36px 32px 32px; color: var(--color-ink); font-family: var(--font-sans); transition: transform 220ms var(--ease-out-strong, cubic-bezier(0.23, 1, 0.32, 1)), border-color 160ms ease, box-shadow 220ms ease; } .ds-card:hover { transform: translateY(-3px); border-color: var(--color-magenta); box-shadow: 0 14px 34px -18px rgb(255 107 181 / 0.42); } .ds-card-path { position: absolute; top: -10px; left: 32px; margin: 0; background: var(--color-void); padding-inline: 8px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-muted); } .ds-card-title { margin: 0; font-size: 3rem; line-height: 1; font-weight: 700; letter-spacing: -0.02em; } .ds-card-body { margin: 16px 0 0; font-size: 1.25rem; line-height: 1.6; } .ds-card-more { display: inline-block; margin-top: 20px; padding-block: 4px; font-family: var(--font-mono); font-size: 1rem; color: var(--color-cyan); text-decoration: none; transition: color 150ms; } .ds-card-more:hover { color: var(--color-magenta); } .ds-card-more:focus-visible { outline: 2px solid var(--color-cyan); outline-offset: 3px; }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "section-heading",
+      "description": "Headline left, mono SIP signal right, on a shared baseline over a hairline rule.",
+      "html": "<div class=\"ds-heading\"><h2 class=\"ds-heading-title\">Experience</h2><span class=\"ds-heading-signal\" aria-hidden=\"true\">100 Trying</span></div>",
+      "css": ".ds-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--color-line); padding-bottom: 16px; color: var(--color-ink); } .ds-heading-title { margin: 0; font-family: var(--font-sans); font-size: 3rem; line-height: 1.25; font-weight: 700; letter-spacing: -0.02em; } .ds-heading-signal { font-family: var(--font-mono); font-size: 0.875rem; white-space: nowrap; color: var(--color-muted); }"
+    },
+    {
+      "name": "Scanlined Frame",
+      "kind": "custom",
+      "refersTo": "screen-crt",
+      "description": "8px frame with a static scanline layer, shared by the portrait, screenshots and CRT screens.",
+      "html": "<div class=\"ds-scan\"><p class=\"ds-scan-run\">C:\\&gt; run clientelia</p><p class=\"ds-scan-note\">sample screen</p></div>",
+      "css": ".ds-scan { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 16 / 9; min-height: 224px; overflow: hidden; background: #0a0a10; border: 1px solid var(--color-line); border-radius: 8px; padding: 16px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-muted); } .ds-scan::after { content: \"\"; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, rgb(5 5 5 / 0.2) 0 1px, transparent 1px 3px); } .ds-scan-run { margin: 0; color: var(--color-cyan); } .ds-scan-note { margin: 0; text-align: right; }"
+    },
+    {
+      "name": "Neon Sign",
+      "kind": "custom",
+      "refersTo": "neon-sign",
+      "description": "Vertical panel of cyan asanoha lattice in a magenta frame with the only resting neon halo. One per page.",
+      "html": "<svg class=\"ds-sign\" viewBox=\"0 0 132 460\" fill=\"none\" aria-hidden=\"true\"><defs><pattern id=\"ds-asanoha\" width=\"33\" height=\"57.16\" patternUnits=\"userSpaceOnUse\"><path d=\"M-33 0L-16.5 9.53M0 0L-16.5 9.53M-16.5 28.58L-16.5 9.53M-33 0L0 0L-16.5 28.58ZM0 0L0 19.05M-16.5 28.58L0 19.05M16.5 28.58L0 19.05M0 0L-16.5 28.58L16.5 28.58ZM0 0L16.5 9.53M33 0L16.5 9.53M16.5 28.58L16.5 9.53M0 0L33 0L16.5 28.58ZM33 0L33 19.05M16.5 28.58L33 19.05M49.5 28.58L33 19.05M33 0L16.5 28.58L49.5 28.58ZM33 0L49.5 9.53M66 0L49.5 9.53M49.5 28.58L49.5 9.53M33 0L66 0L49.5 28.58ZM66 0L66 19.05M49.5 28.58L66 19.05M82.5 28.58L66 19.05M66 0L49.5 28.58L82.5 28.58ZM-16.5 28.58L0 38.11M16.5 28.58L0 38.11M0 57.16L0 38.11M-16.5 28.58L16.5 28.58L0 57.16ZM16.5 28.58L16.5 47.63M0 57.16L16.5 47.63M33 57.16L16.5 47.63M16.5 28.58L0 57.16L33 57.16ZM16.5 28.58L33 38.11M49.5 28.58L33 38.11M33 57.16L33 38.11M16.5 28.58L49.5 28.58L33 57.16ZM49.5 28.58L49.5 47.63M33 57.16L49.5 47.63M66 57.16L49.5 47.63M49.5 28.58L33 57.16L66 57.16ZM49.5 28.58L66 38.11M82.5 28.58L66 38.11M66 57.16L66 38.11M49.5 28.58L82.5 28.58L66 57.16ZM82.5 28.58L82.5 47.63M66 57.16L82.5 47.63M99 57.16L82.5 47.63M82.5 28.58L66 57.16L99 57.16Z\" stroke=\"#5FEBFF\" stroke-opacity=\"0.66\" stroke-width=\"0.7\"/></pattern><linearGradient id=\"ds-sign-fade\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#fff\"/><stop offset=\"1\" stop-color=\"#fff\" stop-opacity=\"0.34\"/></linearGradient><mask id=\"ds-sign-mask\"><rect width=\"132\" height=\"460\" fill=\"url(#ds-sign-fade)\"/></mask></defs><g mask=\"url(#ds-sign-mask)\"><rect x=\"10\" y=\"4\" width=\"112\" height=\"452\" rx=\"8\" fill=\"url(#ds-asanoha)\"/><rect x=\"10\" y=\"4\" width=\"112\" height=\"452\" rx=\"8\" stroke=\"#FF6BB5\" stroke-width=\"1.5\"/></g></svg>",
+      "css": ".ds-sign { display: block; width: 132px; height: auto; filter: drop-shadow(0 0 7px rgb(255 107 181 / 0.3)); }"
+    },
+    {
+      "name": "Name With Block Cursor",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Hero name ending on a solid cyan block that stays still.",
+      "html": "<h1 class=\"ds-name\">Hi, I'm Sergio<span class=\"ds-cursor\"></span></h1>",
+      "css": ".ds-name { margin: 0; font-family: var(--font-sans); font-size: 4.5rem; line-height: 1; font-weight: 700; letter-spacing: -0.03em; color: var(--color-ink); } .ds-cursor { display: inline-block; width: 0.5em; height: 0.72em; margin-left: 0.12em; background: var(--color-cyan); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night-Shift Call Log",
+    "overview": "A terminal left running on a Tokyo side street, kept by one person who built everything on it. The page is a near-black room with a faint 120px grid on the wall and violet light falling from the header. Two neon colours do all the talking: cyan where something can be done, magenta where something is being named or answered. Everything else is ink, grey and hairline.\n\nDensity is unhurried. Type is large, sections sit far apart, and the personal projects carry the most mass on the page. Ornament is line-work drawn at low opacity: the asanoha hemp-leaf lattice and the seigaiha wave horizon, the scanlines over images, the single neon sign. Each should register only when you look for it. The world's humour lives in monospaced marginalia that read like telephony and DOS output, set small and grey beside the real content.\n\nThe system rejects corporate templates and loud cyberpunk: heavy glitch, flicker, chromatic aberration. It also rejects retro-web costume and Japanese characters used as decoration; the Japanese reference is carried by geometry alone.",
+    "keyCharacteristics": [
+      "Near-black ground with a fixed 120px hairline grid and one violet glow from the top of the page.",
+      "Two neon accents with separate jobs: cyan acts, magenta names and answers hover.",
+      "Onest for everything read; Roboto Mono for everything logged.",
+      "Line-only traditional patterns, faded by mask, never filled with colour.",
+      "Flat at rest; depth appears only as a response to a pointer.",
+      "Motion on arrival and on state change only. Nothing loops."
+    ],
+    "rules": [
+      {
+        "name": "The Two Tubes Rule",
+        "body": "Every action is cyan at rest and no action is magenta at rest. Magenta names the person and answers the pointer: a hover on a cyan text link or a neutral link goes to magenta. Both tubes may also light the world's line-work and CRT sketches.",
+        "section": "colors"
+      },
+      {
+        "name": "The Spill Rule",
+        "body": "Violet is light, not paint. It appears as the header's radial glow and never as a fill, a border or a text colour; only its pale tint may colour text, and only on a timeline chip.",
+        "section": "colors"
+      },
+      {
+        "name": "The Brand Marks Rule",
+        "body": "Skill chips may carry a technology's own colour, mixed toward white for the icon (72%) and toward Hairline for the border (45%). No other component borrows outside colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Logged Voice Rule",
+        "body": "Mono is reserved for what a machine would print: dates, paths, signals, commands, field labels, a project's technology row. Sentences a person says stay in Onest.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Mono labels keep their source case with no added tracking. Capitals appear only where the machine would print them: INVITE, ACK, BYE, a DOS path, the text of a CRT screen.",
+        "section": "typography"
+      },
+      {
+        "name": "The Call Sequence Rule",
+        "body": "Page order follows the call. INVITE opens the hero, section signals advance through 100 Trying, 180 Ringing, 200 OK and ACK, and BYE closes the footer. A new section takes its place in the sequence with a real SIP message.",
+        "section": "layout"
+      },
+      {
+        "name": "The Almost-Imperceptible Rule",
+        "body": "Atmosphere stays at the opacities the build set: grid at 3.5% white, scanlines at 20% void every 3px, asanoha at 42%, seigaiha at 32%, sign lattice at 66% and fading down its height. If an effect is the first thing you notice, it is too strong.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Still Light Rule",
+        "body": "Light never moves. Scanlines, glows, the sign and the cursor are static; they do not animate, pulse or blink.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do make every action cyan at rest and move hovers to magenta, except filled buttons, which lift to Lit Cyan.",
+      "Do give every new section a real SIP signal in its heading, in sequence.",
+      "Do set dates, paths and signals in Roboto Mono at 14px or 12px.",
+      "Do gate lift and scale behind a real pointer, and remove every transform under reduced motion.",
+      "Do keep the name and all revealed content fully visible when animation does not run.",
+      "Do use the 2px cyan outline at 3px offset for every keyboard focus state.",
+      "Do swap a CRT screen for a real screenshot in the same scanlined frame as soon as one exists."
+    ],
+    "donts": [
+      "Don't add heavy glitch, flicker or chromatic aberration; scanlines, glow and the cursor stay static and faint.",
+      "Don't use Japanese characters as decoration; asanoha and seigaiha carry the reference as line-work.",
+      "Don't extend the DOS path or `C:\\>` line into windows, title bars, taskbars, boot screens or other operating-system costume, or into GeoCities-style retro-web pastiche.",
+      "Don't fill the asanoha or seigaiha with colour, or raise them above the opacities in the Almost-Imperceptible Rule.",
+      "Don't add a second neon sign, or a resting neon glow to any other element.",
+      "Don't add looping animation, including a blinking cursor.",
+      "Don't give another section the visual weight of the project cards.",
+      "Don't show an invented fact on a surface; missing data is hidden."
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+---
+import { experience, type Role } from "../data/experience";
+import { formatPeriod, sortByMostRecent } from "../lib/period";
+import SectionHeading from "./SectionHeading.astro";
+
+const pillColors: Record<Role["color"], string> = {
+  cyan: "border-cyan/50 text-cyan",
+  magenta: "border-magenta/50 text-magenta",
+  violet: "border-violet-light/50 text-violet-light",
+  white: "border-ink/40 text-ink",
+};
+---
+
+<section id="experience" class="shell reveal py-16 md:py-24">
+  <SectionHeading title="Experience" signal="100 Trying" />
+  <ol>
+    {
+      sortByMostRecent(experience).map((role) => (
+        <li class="relative grid md:grid-cols-[13rem_1fr]">
+          <span class="absolute top-[0.55rem] left-0 size-[9px] -translate-x-1/2 rounded-full bg-ink md:left-52" aria-hidden="true" />
+          <p class="border-l border-line pb-3 pl-7 font-mono text-sm text-muted md:border-0 md:pt-0.5 md:pl-0">
+            {formatPeriod(role)}
+          </p>
+          <div class="border-l border-line pb-14 pl-7 md:pl-10">
+            <p class={`w-fit rounded-full border px-3 py-0.5 text-sm font-medium ${pillColors[role.color]}`}>
+              {role.company}
+            </p>
+            <h3 class="mt-3 text-2xl leading-snug font-semibold">{role.title}</h3>
+            <p class="mt-2 max-w-[65ch] text-pretty text-muted">{role.description}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</section>

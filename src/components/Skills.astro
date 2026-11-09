@@ -1,0 +1,30 @@
+---
+import { skillGroups } from "../data/skills";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section id="skills" class="shell reveal py-16 md:py-24">
+  <SectionHeading title="Skills" signal="180 Ringing" />
+  <div class="grid gap-10">
+    {
+      skillGroups.map((group) => (
+        <div class="grid gap-4 md:grid-cols-[13rem_1fr]">
+          <h3 class="font-mono text-sm leading-relaxed text-muted md:pt-2">{group.category}</h3>
+          <ul class="flex flex-wrap gap-2.5">
+            {group.skills.map((skill) => (
+              <li
+                class="pill flex items-center gap-2 rounded-full border bg-surface py-1.5 pr-4 pl-3 text-base"
+                style={`--brand: color-mix(in oklab, ${skill.color} 72%, white); border-color: color-mix(in oklab, ${skill.color} 45%, #3f3f46)`}
+              >
+                <svg viewBox="0 0 24 24" class="size-4 text-(--brand)" fill="currentColor" aria-hidden="true">
+                  <path d={skill.path} />
+                </svg>
+                {skill.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

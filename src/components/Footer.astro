@@ -1,0 +1,40 @@
+---
+import { site } from "../data/site";
+import SocialLinks from "./SocialLinks.astro";
+
+const r = 28;
+const rows = [-2, -1, 0, 1, 2, 3, 4];
+const columns = [-1, 0, 1, 2];
+---
+
+<footer class="mt-10">
+  <svg class="seigaiha block h-24 w-full" aria-hidden="true">
+    <defs>
+      <pattern id="seigaiha" width={2 * r} height={r} patternUnits="userSpaceOnUse">
+        {
+          rows.map((row) =>
+            columns.map((column) => {
+              const cx = column * 2 * r + (row % 2 ? r : 0);
+              const cy = (row * r) / 2;
+              return [1, 0.68, 0.36].map((scale) => (
+                <circle cx={cx} cy={cy} r={r * scale} fill="#050505" stroke="#5FEBFF" stroke-opacity="0.32" stroke-width="0.8" />
+              ));
+            }),
+          )
+        }
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#seigaiha)"></rect>
+  </svg>
+  <div class="shell flex flex-col items-center gap-3 pt-8 pb-10 text-center">
+    <SocialLinks />
+    <p class="text-base text-muted">© {new Date().getFullYear()} {site.fullName}. Built from scratch in Montevideo.</p>
+    <p class="font-mono text-sm text-muted" aria-hidden="true">BYE</p>
+  </div>
+</footer>
+
+<style>
+  .seigaiha {
+    mask-image: linear-gradient(to bottom, transparent, black);
+  }
+</style>
