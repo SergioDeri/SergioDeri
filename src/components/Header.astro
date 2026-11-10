@@ -4,13 +4,18 @@ import SocialLinks from "./SocialLinks.astro";
 ---
 
 <header class="header-fade sticky top-0 z-40">
-  <div class="shell grid grid-cols-[1fr_auto] items-center gap-x-4 py-2 md:grid-cols-[1fr_auto_1fr]">
+  <div
+    class="shell grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2.5 pt-3 pb-1.5 md:grid-cols-[1fr_auto_1fr] md:gap-y-0 md:py-2"
+  >
     <a href="#top" class="flex min-h-9 w-fit items-center font-mono text-sm text-ink">
       {site.brand}
     </a>
 
-    <nav aria-label="Main" class="order-3 col-span-2 md:order-none md:col-span-1">
-      <ul class="flex justify-between gap-6 pb-1 text-base md:justify-center md:gap-9 md:pb-0">
+    <nav
+      aria-label="Main"
+      class="order-3 col-span-2 border-t border-white/[0.07] pt-1.5 md:order-none md:col-span-1 md:border-0 md:pt-0"
+    >
+      <ul class="flex gap-6 text-[0.9375rem] md:justify-center md:gap-9 md:text-base">
         {
           navigation.map((item) => (
             <li>
@@ -27,7 +32,8 @@ import SocialLinks from "./SocialLinks.astro";
       <div class="hidden md:block"><SocialLinks /></div>
       <a
         href="#contact"
-        class="button rounded-full bg-cyan px-4 py-2 text-sm font-semibold whitespace-nowrap text-void">Contact me</a
+        class="button inline-flex min-h-9 items-center rounded-full bg-cyan px-4 text-sm font-semibold whitespace-nowrap text-void"
+        >Contact me</a
       >
     </div>
   </div>

@@ -115,6 +115,13 @@ html.loading {
     background: linear-gradient(to bottom, rgb(0 0 0 / 0.94), rgb(0 0 0 / 0.78) 62%, transparent);
   }
 
+  /* The two-row mobile header covers more text, so it stays nearly solid until the fade. */
+  @media (max-width: 47.99rem) {
+    .header-fade::before {
+      background: linear-gradient(to bottom, rgb(0 0 0 / 0.96), rgb(0 0 0 / 0.92) 80%, transparent);
+    }
+  }
+
   .scanlines {
     position: relative;
     isolation: isolate;
