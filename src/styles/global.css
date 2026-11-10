@@ -156,8 +156,8 @@ html.loading {
     mask: var(--cutout) center / 100% 100% no-repeat;
   }
 
-  /* Slices of the portrait that jump sideways for ~300ms: once as the page settles
-     after the curtain (the 600ms delay waits out the scale-in), then every 15s. */
+  /* Slices of the portrait that jump sideways for ~240ms: once as the page settles
+     after the curtain (the 600ms delay waits out the scale-in), then every 8s. */
   .portrait-glitch {
     position: absolute;
     inset: 0;
@@ -169,11 +169,11 @@ html.loading {
 
   @media (prefers-reduced-motion: no-preference) {
     .portrait-glitch {
-      animation: portrait-glitch 15s steps(1, end) 600ms infinite;
+      animation: portrait-glitch 8s steps(1, end) 600ms infinite;
     }
 
     .portrait img {
-      animation: portrait-jolt 15s steps(1, end) 600ms infinite;
+      animation: portrait-jolt 8s steps(1, end) 600ms infinite;
     }
 
     .loading:not(.revealed) .portrait-glitch,
@@ -373,30 +373,30 @@ html.loading {
   }
 }
 
-/* Each 0.4% step of the 15s cycle lasts 60ms; the burst opens the cycle. */
+/* Each 0.6% step of the 8s cycle lasts 48ms; the burst opens the cycle. */
 @keyframes portrait-glitch {
   0% {
     opacity: 1;
     clip-path: inset(24% 0 64% 0);
     transform: translateX(-7px);
   }
-  0.4% {
+  0.6% {
     clip-path: inset(57% 0 31% 0);
     transform: translateX(6px);
   }
-  0.8% {
+  1.2% {
     clip-path: inset(38% 0 54% 0);
     transform: translateX(-4px);
   }
-  1.2% {
+  1.8% {
     clip-path: inset(71% 0 19% 0);
     transform: translateX(5px);
   }
-  1.6% {
+  2.4% {
     clip-path: inset(46% 0 47% 0);
     transform: translateX(-3px);
   }
-  2%,
+  3%,
   100% {
     opacity: 0;
     clip-path: inset(0);
@@ -405,15 +405,15 @@ html.loading {
 }
 
 @keyframes portrait-jolt {
-  0.4% {
+  0.6% {
     transform: translateX(2px);
   }
-  1.2% {
+  1.8% {
     transform: translateX(-2px);
   }
   0%,
-  0.8%,
-  1.6%,
+  1.2%,
+  2.4%,
   100% {
     transform: none;
   }
