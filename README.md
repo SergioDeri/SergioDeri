@@ -2,7 +2,7 @@
 
 Backend & Full Stack Developer from Montevideo, Uruguay, with 5+ years building software and solving complex VoIP and contact center problems.
 
-**Portfolio:** [sergioderi.vercel.app](https://sergioderi.vercel.app) · **LinkedIn:** [sergio-deri](https://www.linkedin.com/in/sergio-deri)
+**Portfolio:** [sergioderi.dev](https://sergioderi.dev) · **LinkedIn:** [sergio-deri](https://www.linkedin.com/in/sergio-deri)
 
 ## Projects
 

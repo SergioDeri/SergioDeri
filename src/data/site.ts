@@ -1,6 +1,6 @@
 /** The one place to change the public URL once a domain exists. */
 export const site = {
-  url: "https://sergioderi.vercel.app",
+  url: "https://sergioderi.dev",
   brand: "sergioderi",
   name: "Sergio",
   fullName: "Sergio Deri",
