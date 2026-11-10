@@ -22,7 +22,7 @@ export const projects: Project[] = [
     description: "SaaS platform for weekly food ordering at cafés.",
     screen: "week",
     url: "https://tostad.app",
-    stack: [],
+    stack: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "MercadoPago"],
     inProduction: true,
   },
   {
