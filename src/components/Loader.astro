@@ -1,0 +1,88 @@
+---
+/**
+ * Opening curtain. The page stays covered until it has loaded, then the two halves
+ * slide apart and the content scales in. `html.loading` is set by an inline script in
+ * Base.astro, so without JavaScript the curtains never appear, and under reduced motion
+ * they are removed at once.
+ */
+---
+
+<div class="loader" aria-hidden="true">
+  <div class="curtain curtain-left"></div>
+  <div class="curtain curtain-right"></div>
+</div>
+
+<script>
+  import { gsap } from "gsap";
+
+  const root = document.documentElement;
+  const loader = document.querySelector<HTMLElement>(".loader");
+
+  const finish = () => {
+    root.classList.remove("loading");
+    loader?.remove();
+  };
+
+  const play = () => {
+    // The fail-safe in Base.astro may have uncovered the page already.
+    if (!root.classList.contains("loading")) return finish();
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return finish();
+
+    const tl = gsap.timeline({ onComplete: finish });
+    tl.to(".curtain-left", { xPercent: -100, duration: 1, ease: "power3.inOut" }, 0)
+      .to(".curtain-right", { xPercent: 100, duration: 1, ease: "power3.inOut" }, 0)
+      .from(
+        ".content",
+        {
+          scale: 0.5,
+          opacity: 0,
+          ease: "back.out(1.7)",
+          // .content is the whole page, thousands of pixels tall. Scale around the middle
+          // of the screen, not the middle of the page, or the top drops out of view.
+          transformOrigin: `50% ${scrollY + innerHeight / 2}px`,
+          // A leftover transform would break the sticky header.
+          clearProps: "transform,opacity",
+          // Release the paused hero animations as the content arrives.
+          onStart: () => root.classList.add("revealed"),
+        },
+        0.5,
+      );
+  };
+
+  if (document.readyState === "complete") play();
+  else addEventListener("load", play, { once: true });
+</script>
+
+<style>
+  .loader {
+    display: none;
+  }
+
+  :global(html.loading) .loader {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  .curtain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    /* Lighter than the page so the halves read against the black behind them. */
+    background: var(--color-surface);
+  }
+
+  /* Each half carries a cyan edge, so two lines part as the curtain opens. */
+  .curtain-left {
+    left: 0;
+    box-shadow: inset -2px 0 0 var(--color-cyan);
+  }
+
+  .curtain-right {
+    right: 0;
+    box-shadow: inset 2px 0 0 var(--color-cyan);
+  }
+</style>

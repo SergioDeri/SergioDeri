@@ -83,6 +83,12 @@
   }
 }
 
+/* No scrolling while the opening curtain is closed. */
+html.loading {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
 @layer components {
   .shell {
     width: min(100% - 3rem, 72rem);
@@ -264,6 +270,12 @@
     .cursor {
       animation: fade-in 120ms ease backwards;
       animation-delay: 1000ms;
+    }
+
+    /* Hold the name entrance behind the opening curtain (Loader.astro). */
+    .loading:not(.revealed) .letter,
+    .loading:not(.revealed) .cursor {
+      animation-play-state: paused;
     }
 
     .js .reveal {
