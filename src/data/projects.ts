@@ -44,7 +44,7 @@ export const projects: Project[] = [
     name: "ElegilosVos",
     dosName: "ELEGILOS",
     description: "Football fans pick their team's starting eleven before each match and see how the crowd's choice compares with the coach's.",
-    url: "https://elegilosvos.vercel.app",
+    url: "https://elegilosvos.sergioderi.dev/",
     screen: "vote",
     image: "elegilosvos.png",
     imageAlt: "ElegilosVos login screen: pixel-art logo over a football pitch, with Google and email sign-in.",

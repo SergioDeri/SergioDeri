@@ -7,7 +7,7 @@ Backend & Full Stack Developer from Montevideo, Uruguay, with 5+ years building 
 ## Projects
 
 - [**tostad.app**](https://tostad.app)
-- [**ElegilosVos**](https://elegilosvos.vercel.app): football fans pick their team's starting eleven before each match and see how the crowd's choice compares with the coach's.
+- [**ElegilosVos**](https://elegilosvos.sergioderi.dev/): football fans pick their team's starting eleven before each match and see how the crowd's choice compares with the coach's.
 
 ## About this repository
 
