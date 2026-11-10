@@ -46,6 +46,8 @@ export const projects: Project[] = [
     description: "Football fans pick their team's starting eleven before each match and see how the crowd's choice compares with the coach's.",
     url: "https://elegilosvos.vercel.app",
     screen: "vote",
+    image: "elegilosvos.png",
+    imageAlt: "ElegilosVos login screen: pixel-art logo over a football pitch, with Google and email sign-in.",
     stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "PWA", "Web Push"],
   },
 ];
