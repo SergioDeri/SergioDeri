@@ -19,7 +19,7 @@ const screenshotFor = (file?: string) => (file ? screenshots[`../assets/projects
       projects.map((project) => {
         const screenshot = screenshotFor(project.image);
         return (
-          <article class="project-card relative rounded-lg border border-line bg-surface p-5 pt-7 md:p-8 md:pt-9">
+          <article class="scroll-fade project-card relative rounded-lg border border-line bg-surface p-5 pt-7 md:p-8 md:pt-9">
             <p class="absolute -top-2.5 left-5 bg-void px-2 font-mono text-xs break-all text-muted md:left-8" aria-hidden="true">
               C:\SERGIO\PROJECTS\{project.dosName}
             </p>

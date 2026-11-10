@@ -8,7 +8,7 @@ import SectionHeading from "./SectionHeading.astro";
   <div class="grid gap-10">
     {
       skillGroups.map((group) => (
-        <div class="grid gap-4 md:grid-cols-[13rem_1fr]">
+        <div class="scroll-fade grid gap-4 md:grid-cols-[13rem_1fr]">
           <h3 class="font-mono text-sm leading-relaxed text-muted md:pt-2">{group.category}</h3>
           <ul class="flex flex-wrap gap-2.5">
             {group.skills.map((skill) => (

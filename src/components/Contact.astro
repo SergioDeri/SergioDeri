@@ -20,22 +20,22 @@ const labelClass = "mb-2 block font-mono text-sm text-muted";
     <input type="hidden" name="from_name" value="Portfolio contact form" />
     <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="hidden" />
 
-    <div>
+    <div class="scroll-fade">
       <label for="email" class={labelClass}>Email</label>
       <input id="email" name="email" type="email" required autocomplete="email" class="field" />
     </div>
-    <div>
+    <div class="scroll-fade">
       <label for="subject" class={labelClass}>Subject</label>
       <input id="subject" name="subject" type="text" required class="field" />
     </div>
-    <div>
+    <div class="scroll-fade">
       <label for="message" class={labelClass}>Message</label>
       <textarea id="message" name="message" required rows="6" class="field resize-y"></textarea>
     </div>
 
     <button
       type="submit"
-      class="button w-full rounded-lg bg-cyan px-6 py-3.5 font-semibold text-void disabled:cursor-progress disabled:opacity-70"
+      class="scroll-fade button w-full rounded-lg bg-cyan px-6 py-3.5 font-semibold text-void disabled:cursor-progress disabled:opacity-70"
     >
       Send message
     </button>

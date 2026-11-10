@@ -7,7 +7,7 @@ interface Props {
 const { title, signal } = Astro.props;
 ---
 
-<div class="mb-12 flex items-baseline justify-between gap-6 border-b border-line pb-4 md:mb-16">
+<div class="scroll-fade mb-12 flex items-baseline justify-between gap-6 border-b border-line pb-4 md:mb-16">
   <h2 class="text-4xl leading-tight font-bold tracking-[-0.02em] md:text-5xl">{title}</h2>
   <span class="font-mono text-sm whitespace-nowrap text-muted" aria-hidden="true">{signal}</span>
 </div>
