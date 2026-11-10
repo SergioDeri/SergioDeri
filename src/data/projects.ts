@@ -30,7 +30,7 @@ export const projects: Project[] = [
     dosName: "OSHINAGA",
     description: "Online menu for restaurants.",
     screen: "menu",
-    stack: [],
+    stack: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Vercel"],
     inProduction: true,
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     dosName: "CLIENTEL",
     description: "Complete platform to follow projects, manage tickets and keep client data in one place.",
     screen: "tickets",
-    stack: [],
+    stack: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "Google OAuth", "Gmail API"],
   },
   {
     name: "ElegilosVos",
@@ -46,6 +46,6 @@ export const projects: Project[] = [
     description: "Football fans pick their team's starting eleven before each match and see how the crowd's choice compares with the coach's.",
     url: "https://elegilosvos.vercel.app",
     screen: "vote",
-    stack: [],
+    stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "PWA", "Web Push"],
   },
 ];
